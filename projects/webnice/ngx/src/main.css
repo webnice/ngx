@@ -1,0 +1,10 @@
+/** фреймворк tailwindcss. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/** тема. */
+@import "./css/theme-defaults.css";
+@import "./css/theme-components.css";
+@import "./css/theme-white.css";

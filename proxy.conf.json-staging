@@ -1,0 +1,20 @@
+{
+  "/api/": {
+    "target": "https://devmp.kallisto.ru/",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/favicon*": {
+    "target": "https://devmp.kallisto.ru",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/manifest.json": {
+    "target": "https://devmp.kallisto.ru",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

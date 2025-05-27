@@ -1,0 +1,68 @@
+@theme default {
+  --font-osMain: 'Open Sans', ui-serif, serif, Georgia, Cambria, 'Times New Roman', Times;
+  --font-osMainSemiBold: 'Open Sans SemiBold', ui-serif, serif, Georgia, Cambria, 'Times New Roman', Times;
+  --font-osMainExtraBold: 'Open Sans ExtraBold', ui-serif, serif, Georgia, Cambria, 'Times New Roman', Times;
+
+  --color-wddpMainBg: #FFFFFF;
+  --color-wddpMainFg: #1E293B;
+  --color-wddpHeaderBg: #FFFFFF;
+  --color-wddpLogoBg: #0C4A6E;
+  --color-wddpLogoFg: #FFFFFF;
+  --color-wddpFgActive1: #515E6F;
+  --color-wddpFgActive2: #0EA5E9;
+  --color-wddpFgPassive: #94A3B8;
+  --color-wddpFgAlert: #DC2626;
+  --color-wddpHover1: #E0F2FE;
+  --color-wddpFgHover1: #475569;
+  --color-wddpFgHover2: #99B7E1;
+  --color-wddpFgHover3: #0284C7;
+  --color-wddpFgHover4: #16A34A;
+  --color-wddpContentBg: #F1F5F9;
+  --color-wddpMenuBg: #CBD5E1;
+  --color-wddpActiveBg1: #E2E8F0;
+  --color-wddpPassiveBg1: #D5DBE3;
+  --color-wddpTableSelect: #F0F9FF;
+  --color-wddpElementActive: #BAE6FD;
+  --color-wddpIlluminateBg1: #BBF7D0;
+  --color-wddpIlluminateBg2: #FEE2E2;
+  --color-wddpWarning: #EF4444;
+}
+
+@layer base {
+  :root {
+    /** отключение масштабирования. */
+    touch-action: manipulation;
+    @apply w-full;
+    --android-nav-bar-color: #212121;
+  }
+
+  html,
+  :host {
+    @apply font-osMain bg-wddpContentBg;
+    /** Шрифт для размеров экрана. SL и меньше. */
+    @apply max-sm:text-wdsl max-sm:font-normal;
+    /** Шрифт для размеров экрана. SM. */
+    @apply sm:max-md:text-wdsm sm:max-md:font-normal;
+    /** Шрифт для размеров экрана. MD и больше. */
+    @apply md:text-wdmd md:font-normal;
+  }
+
+  body {
+    @apply m-0 p-0;
+    @apply relative;
+    @apply w-full h-full;
+    /** отключение масштабирования. */
+    touch-action: manipulation;
+  }
+
+  /* Цвет заполнителей по умолчанию. */
+  input::placeholder,
+  textarea::placeholder {
+    color: theme(--color-wddpFgPassive);
+  }
+
+  /* Удаление заливки SVG иконок по умолчанию. */
+  svg {
+    fill: none;
+  }
+}

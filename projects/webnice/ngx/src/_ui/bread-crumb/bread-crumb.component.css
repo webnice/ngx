@@ -1,0 +1,12 @@
+@reference "../../main.css";
+
+/* Основной стиль хлебных крошек. */
+.bread-crumb {
+  @apply flex flex-row flex-nowrap gap-[4px] text-wddpMainFg;
+  /** для размеров экрана SM и меньше. */
+  @apply max-sm:pt-[4px];
+  /** для размеров экрана SM. */
+  @apply sm:max-md:pt-[14px];
+  /** для размеров экрана MD и больше. */
+  @apply md:pt-[20px];
+}

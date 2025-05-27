@@ -1,0 +1,30 @@
+<!-- Контейнер отображается только если существует хотя бы одна хлебная крошка. -->
+<ng-container *ngIf="ways.length > 0">
+  <div
+    class="bread-crumb text-osSemiBold15Up">
+    <!-- Цикл по всем хлебным крошкам. -->
+    <ng-container
+      *ngFor="let item of ways; index as n;">
+      <!-- Если хлебная крошка не является ссылкой. -->
+      <ng-container *ngIf="!isLink(n)">
+        <div class="select-none">{{ item.name }}</div>
+      </ng-container>
+      <!-- /Если хлебная крошка не является ссылкой. -->
+
+      <!-- Если хлебная крошка является ссылкой. -->
+      <ng-container *ngIf="isLink(n)">
+        <a [routerLink]="item.urnInternal" class="select-none cursor-pointer hover:underline">{{ item.name }}</a>
+      </ng-container>
+      <!-- /Если хлебная крошка является ссылкой. -->
+
+      <!-- Разделитель между хлебными крошками. -->
+      <ng-container
+        *ngIf="!isLast(n)">
+        <div class="select-none">/</div>
+      </ng-container>
+      <!-- /Разделитель между хлебными крошками. -->
+    </ng-container>
+    <!-- /Цикл по всем хлебным крошкам. -->
+  </div>
+</ng-container>
+<!-- /Контейнер отображается только если существует хотя бы одна хлебная крошка. -->

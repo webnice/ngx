@@ -1,0 +1,51 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+## Системные файлы.
+.DS_Store
+Thumbs.db
+
+## Персональные настроки.
+nohup.out
+/proxy.conf.json
+/proxy.conf.*.json
+!/proxy.conf.example.json
+/src/environments/version.constant.ts
+/assets/images/sprite-icons.clean.svg
+/assets/images/sprite-icons.full.svg
