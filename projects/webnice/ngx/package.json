@@ -2,12 +2,13 @@
   "name": "@webnice/ngx",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^19.2.12",
-    "@angular/core": "^19.2.12",
-    "tailwindcss": "^4.1.7",
+    "@angular/animations": "^19.2.13",
+    "@angular/common": "^19.2.13",
+    "@angular/core": "^19.2.13",
     "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/postcss": "^4.1.7",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/postcss": "^4.1.7"
+    "tailwindcss": "^4.1.7"
   },
   "dependencies": {
     "tslib": "^2.3.0"

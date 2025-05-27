@@ -1,0 +1,45 @@
+:root {
+  --dialog-background: #f5f5f5;
+  --dialog-overlay-background: rgba(0, 0, 0, 0.75);
+  --dialog-overlay-backdrop-filter: blur(1px);
+  --dialog-default-loader-color: #6c757d;
+  --dialog-z-index-overlay: 9999;
+  --dialog-z-index-dialog: 10000;
+  --dialog-border-radius: 0.75rem;
+  --dialog-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.1), 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.ng-vibe-dialog-overlay {
+  backdrop-filter: var(--dialog-overlay-backdrop-filter);
+  background: var(--dialog-overlay-background);
+  z-index: var(--dialog-z-index-overlay);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.ng-vibe-dialog-wrapper {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: var(--dialog-z-index-dialog);
+}
+
+.ng-vibe-dialog-wrapper .ng-vibe-dialog {
+  pointer-events: auto;
+  overflow: hidden;
+  box-shadow: var(--dialog-shadow);
+  background-color: var(--dialog-background);
+  position: absolute;
+  border-radius: var(--dialog-border-radius);
+}
+
+.ng-vibe-dialog-wrapper .ng-vibe-dialog .dialog-content {
+  overflow: auto;
+  max-height: 100%;
+  max-width: 100%;
+}

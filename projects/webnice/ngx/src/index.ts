@@ -1,3 +1,8 @@
+export * from './__old_trash_dialog';
+export * from './__old_trash_drawer';
+export * from './__old_trash_enums';
+export * from './__old_trash_toastify';
+
 export * from './_classes';
 // export * from './_components';
 // export * from './_directives';

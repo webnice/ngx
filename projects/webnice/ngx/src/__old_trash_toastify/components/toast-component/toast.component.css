@@ -1,0 +1,382 @@
+@keyframes slideDown {
+  from {
+    top: -20px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes slideDownFirst {
+  from {
+    top: -20px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.toast-slide-down-first {
+  position: relative;
+  animation: slideDownFirst 0.3s ease-out forwards;
+}
+
+.toast-slide-down-all {
+  position: relative;
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.toastify-wrapper {
+  z-index: 999999999999;
+  position: fixed;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.toastify-wrapper * {
+  box-sizing: border-box;
+}
+
+.toastify-wrapper.toastify-wrapper-top-right {
+  right: 30px;
+  top: 20px;
+  width: 300px;
+}
+
+.toastify-wrapper.toastify-wrapper-top-left {
+  left: 30px;
+  top: 15px;
+  width: 300px;
+}
+
+.toastify-wrapper.toastify-wrapper-top-center {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+}
+
+.toastify-wrapper.toastify-wrapper-top-fullwidth {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 93vw;
+}
+
+.toastify-wrapper.toastify-wrapper-bottom-left {
+  left: 30px;
+  bottom: 20px;
+  width: 300px;
+}
+
+.toastify-wrapper.toastify-wrapper-bottom-right {
+  right: 30px;
+  bottom: 20px;
+  width: 300px;
+}
+
+.toastify-wrapper.toastify-wrapper-bottom-center {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  width: 300px;
+}
+
+.toastify-wrapper.toastify-wrapper-bottom-fullwidth {
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: 93vw;
+}
+
+.toastify-wrapper .ng-vibe-toastify {
+  box-shadow: var(--toastify-shadow);
+  background-color: var(--toastify-bg-neutral);
+  border-radius: var(--toastify-border-radius);
+  margin: 10px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.toastify-wrapper .ng-vibe-toastify:hover .ng-vibe-close-icon {
+  opacity: 1;
+}
+
+.toastify-wrapper .ng-vibe-toastify .ng-vibe-close-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  padding: 14px;
+  z-index: 1;
+}
+
+.toastify-wrapper .ng-vibe-toastify .ng-vibe-close-icon::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  top: 7px;
+  left: 18px;
+}
+
+.toastify-wrapper .ng-vibe-toastify .ng-vibe-close-icon::after {
+  content: '\d7';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 26px;
+  line-height: 0;
+  text-align: center;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content {
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 20px;
+  padding: 5px 0;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content .progress-bar-container {
+  width: 100%;
+  position: relative;
+  bottom: -5px;
+  background: var(--toastify-progress-bar-container-bg);
+  border-radius: 0 0 2px 2px;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content .progress-bar-container .progress-bar {
+  height: 1px;
+  transition: none;
+  width: 0;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content[data-align='start'] {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content[data-align='start'] .toastify-icon-section {
+  padding: 0 10px 0 0;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content[data-align='center'] {
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content[data-align='center'] .toastify-title-content {
+  left: -18px;
+  position: relative;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content[data-align='center'][data-title='long-title'] .toastify-title-content {
+  left: 0;
+  position: relative;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content[data-align='end'] {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content[data-align='end'] .toastify-title-content {
+  flex-direction: row-reverse;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content[data-align='end'] .toastify-title-content .toastify-icon-section {
+  padding: 0 0 0 10px;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content .toastify-title-content {
+  display: flex;
+  font-size: 0.93rem;
+  padding: 2px 14px 2px 14px;
+  width: 100%;
+  align-items: center;
+  font-weight: 500;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content .toastify-title-content i {
+  font-size: 20px;
+  opacity: 0.6;
+  padding: 0 10px;
+  position: relative;
+  top: 2px;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content .toastify-title-content span {
+  flex: 1;
+  text-align: inherit;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content .toastify-text-content {
+  overflow: auto;
+  font-size: 0.87rem;
+  padding: 2px 15px 2px 14px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.toastify-wrapper .ng-vibe-toastify .toastify-content .toastify-text-content span {
+  width: 100%;
+  text-align: inherit;
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-neutral {
+  background-color: var(--toastify-bg-neutral);
+  color: var(--toastify-text-neutral);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-neutral .toastify-icon-section {
+  color: var(--toastify-bg-neutral_shade);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-neutral .progress-bar {
+  background: var(--toastify-bg-neutral_shade-bg);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-neutral .ng-vibe-close-icon::before {
+  border-bottom: 60px solid var(--toastify-bg-neutral_shade);
+  opacity: 0.5;
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-success {
+  background-color: var(--toastify-bg-success);
+  color: var(--toastify-text-success);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-success .toastify-icon-section {
+  color: var(--toastify-bg-success_shade);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-success .progress-bar {
+  background: var(--toastify-bg-success_shade-bg);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-success .ng-vibe-close-icon::before {
+  background: var(--toastify-bg-success_shade);
+  opacity: 0.5;
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-info {
+  background-color: var(--toastify-bg-info);
+  color: var(--toastify-text-info);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-info .toastify-icon-section {
+  color: var(--toastify-bg-info_shade);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-info .progress-bar {
+  background: var(--toastify-bg-info_shade-bg);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-info .ng-vibe-close-icon::before {
+  background: var(--toastify-bg-info_shade);
+  opacity: 0.5;
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-warning {
+  background-color: var(--toastify-bg-warning);
+  color: var(--toastify-text-warning);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-warning .toastify-icon-section {
+  color: var(--toastify-bg-warning_shade);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-warning .progress-bar {
+  background: var(--toastify-bg-warning_shade-bg);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-warning .ng-vibe-close-icon::before {
+  background: var(--toastify-bg-warning_shade);
+  opacity: 0.5;
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-danger {
+  background-color: var(--toastify-bg-danger);
+  color: var(--toastify-text-danger);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-danger .toastify-icon-section {
+  color: var(--toastify-bg-danger_shade);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-danger .progress-bar {
+  background: var(--toastify-bg-danger_shade-bg);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-danger .ng-vibe-close-icon::before {
+  background: var(--toastify-bg-danger_shade);
+  opacity: 0.5;
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-custom-one {
+  background-color: var(--toastify-bg-custom-one);
+  color: var(--toastify-text-custom-one);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-custom-one .toastify-icon-section {
+  color: var(--toastify-bg-custom-one_shade);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-custom-one .progress-bar {
+  background: var(--toastify-bg-custom-one_shade-bg);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-custom-one .ng-vibe-close-icon::before {
+  background: var(--toastify-bg-custom-one_shade);
+  opacity: 0.5;
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-custom-two {
+  background-color: var(--toastify-bg-custom-two);
+  color: var(--toastify-text-custom-two);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-custom-two .toastify-icon-section {
+  color: var(--toastify-bg-custom-two_shade);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-custom-two .progress-bar {
+  background: var(--toastify-bg-custom-two_shade-bg);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-custom-two .ng-vibe-close-icon::before {
+  background: var(--toastify-bg-custom-two_shade);
+  opacity: 0.5;
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-custom-three {
+  background-color: var(--toastify-bg-custom-three);
+  color: var(--toastify-text-custom-three);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-custom-three .toastify-icon-section {
+  color: var(--toastify-bg-custom-three_shade);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-custom-three .progress-bar {
+  background: var(--toastify-bg-custom-three_shade-bg);
+}
+
+.toastify-wrapper .ng-vibe-toastify.toastify-custom-three .ng-vibe-close-icon::before {
+  background: var(--toastify-bg-custom-three_shade);
+  opacity: 0.5;
+}
