@@ -1,0 +1,63 @@
+@reference "../../main.css";
+
+/* Основной объект меню. */
+.menu {
+  @apply bg-wddpMenuBg;
+  /** для размеров экрана SM и меньше. */
+  @apply max-md:absolute max-md:z-50 max-md:left-0 max-md:top-0 max-md:min-h-[calc(100dvh)];
+  /** для размеров экрана MD и больше. */
+  @apply md:min-h-[calc(100dvh-55px-52px)];
+  /** Основной стиль области контента. */
+  @apply w-full h-full overflow-y-auto;
+}
+
+/* Ширина меню, добавляется в сжатом режиме. */
+.menu-thin {
+  @apply w-[240px];
+}
+
+/* Заголовок меню. */
+.title {
+  @apply w-full flex flex-row;
+  @apply px-[14px];
+}
+
+/* Текст заголовка меню. */
+.title-name {
+  @apply min-h-[40px] flex flex-row pr-[6px];
+  @apply overflow-hidden;
+}
+
+/* Иконка заголовка меню. */
+.title-icon {
+  @apply min-h-[40px] flex justify-self-center;
+  @apply ml-auto;
+}
+
+/* Разделы меню - содержимое. */
+.content {
+  @apply w-full flex flex-row px-[14px];
+  @apply hover:bg-wddpTableSelect;
+}
+
+/* Текст названия раздела. */
+.content-name {
+  @apply min-h-[40px] max-w-[236px] flex flex-row;
+  @apply overflow-hidden;
+}
+
+/* Текст названия раздела для отображения меню во всю ширину. */
+.content-long {
+  @apply pl-[6px] w-full;
+}
+
+/* Иконка раздела. */
+.content-icon {
+  @apply min-h-[40px] flex justify-self-center mb-auto;
+}
+
+/* Наклейка раздела. */
+.content-sticker {
+  @apply w-fit flex px-[5px] mb-auto;
+  @apply bg-wddpFgAlert rounded-[9px] text-wddpMainBg select-none;
+}

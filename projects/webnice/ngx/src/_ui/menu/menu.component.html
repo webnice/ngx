@@ -1,0 +1,93 @@
+<div
+  [ngClass]="{'max-md:hidden':!isOpen, 'menu-thin':!isThin, 'pb-[53px]':isMobile}"
+  class="menu">
+  <!-- Заголовок меню. -->
+  <div
+    [ngClass]="{'justify-start':isThin}"
+    class="title">
+    <!-- Название -->
+    <div
+      [ngClass]="{'hidden':isThin}"
+      class="title-name text-osSemiBold14 text-wddpLogoBg">
+      <div [ngClass]="{'hidden':isThin || title === ''}" class="flex my-auto select-none">{{ title }}</div>
+    </div>
+    <!-- /Название -->
+    <!-- Иконка -->
+    <div
+      class="title-icon">
+      <button
+        (click)="doToggle()"
+        class="cursor-pointer">
+        @let iconName = titleIconName;
+        <icon
+          [name]="iconName.active" [hover]="iconName.hover" [passive]="iconName.passive"
+          [update]="iconCloseUpdate"
+          [width]="18" [height]="18"
+        ></icon>
+      </button>
+    </div>
+    <!-- /Иконка -->
+  </div>
+  <!-- /Заголовок меню. -->
+
+  <!-- Содержимое меню. -->
+  <div
+    *ngFor="let item of sections"
+    (click)="onContentClick(item)"
+    [ngClass]="{
+      'cursor-pointer':!item.isDisabled, 'cursor-not-allowed':item.isDisabled,
+      'justify-center':isThin, 'justify-start':!isThin,
+      'bg-wddpActiveBg1':item.isCurrent, 'bg-wddpPassiveBg1':item.isDisabled
+    }"
+    class="content">
+    <!-- Область иконки раздела меню. -->
+    <div
+      class="content-icon">
+      <!-- Наклейка. -->
+      <div
+        [ngClass]="{'hidden':!isThin}"
+        class="relative w-0 h-0 -left-[10px] top-[4px]">
+        <div class="w-[41px] flex">
+          <div
+            [ngClass]="{'mx-auto':isThin}"
+            class="content-sticker text-osSemiBold9">{{ item.sticker }}
+          </div>
+        </div>
+      </div>
+      <!-- /Наклейка. -->
+      <!-- /Иконка. -->
+      <icon
+        [name]="item.iconActive" [passive]="item.iconPassive"
+        [isPassive]="item.isDisabled" [update]="item.iconUpdate"
+        [width]="18" [height]="18"
+        class="my-auto"></icon>
+      <!-- /Иконка. -->
+    </div>
+    <!-- /Область иконки раздела меню. -->
+
+    <!-- Название -->
+    <div
+      [ngClass]="{'hidden':isThin, 'content-long':!isThin}"
+      class="content-name text-osSemiBold14">
+      <div
+        [ngClass]="{'text-wddpFgActive1':!item.isCurrent, 'text-wddpFgPassive':item.isCurrent, 'hidden':isThin}"
+        class="flex my-auto select-none max-w-[236px] text-wrap break-all">{{ item.name }}
+      </div>
+    </div>
+    <!-- /Название -->
+
+    <!-- Наклейка. -->
+    <div
+      [ngClass]="{'hidden':isThin}"
+      class="flex flex-col relative w-0 h-0 -left-[41px] top-[12px] justify-center">
+      <div class="w-[41px] flex">
+        <div
+          [ngClass]="{'hidden':isThin, 'ml-auto':!isThin}"
+          class="content-sticker text-osSemiBold9">{{ item.sticker }}
+        </div>
+      </div>
+    </div>
+    <!-- Наклейка. -->
+  </div>
+  <!-- /Содержимое меню. -->
+</div>
