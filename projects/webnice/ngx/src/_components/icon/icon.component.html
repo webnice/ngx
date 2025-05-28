@@ -1,0 +1,11 @@
+<ng-container *ngIf="isView">
+  <div
+    (mouseenter)="onHover()"
+    (mouseleave)="onHout()"
+    [ngStyle]="{'width': width+ 'px', 'height': height+ 'px'}"
+    class="overflow-hidden">
+    <svg #svg viewBox="0 0 0 0" width="0px" height="0px" class="m-0 p-0 align-top">
+      <use #use xlink:href=""></use>
+    </svg>
+  </div>
+</ng-container>
