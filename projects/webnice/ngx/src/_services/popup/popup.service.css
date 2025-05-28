@@ -1,36 +1,36 @@
-/** '@ng-vibe/toastify/styles/styles'; */
-/** '@webnice/ngx/styles/styles'; */
+/** '@import "@webnice/ngx/styles-popup";' */
+/** '@import "@webnice/ngx/src/_services/popup/popup.service.css";' */
 
 :root {
   --toastify-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.1), 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --toastify-border-radius: 0.45rem;
   --toastify-progress-bar-container: rgba(234, 4, 4, 0.7);
-  --toastify-progress-bar-container-bg: rgba(255, 255, 255, 1);
+  --toastify-progress-bar-container-bg: white;
 
   --toastify-bg-neutral: white;
   --toastify-bg-neutral_shade: rgba(255, 255, 255, 0.3);
-  --toastify-bg-neutral_shade-bg: rgba(0, 0, 0, 1);
+  --toastify-bg-neutral_shade-bg: black;
   --toastify-bg-success: #95cdce;
   --toastify-bg-success_shade: rgba(149, 205, 206, 0.3);
-  --toastify-bg-success_shade-bg: rgba(0, 0, 0, 1);
+  --toastify-bg-success_shade-bg: black;
   --toastify-bg-info: #aad7f1;
   --toastify-bg-info_shade: rgba(170, 215, 241, 0.3);
-  --toastify-bg-info_shade-bg: rgba(0, 0, 0, 1);
+  --toastify-bg-info_shade-bg: black;
   --toastify-bg-warning: #ffe7a0;
   --toastify-bg-warning_shade: rgba(255, 231, 160, 0.15);
-  --toastify-bg-warning_shade-bg: rgba(0, 0, 0, 1);
+  --toastify-bg-warning_shade-bg: black;
   --toastify-bg-danger: #f8c5cc;
   --toastify-bg-danger_shade: rgba(248, 197, 204, 0.2);
-  --toastify-bg-danger_shade-bg: rgba(0, 0, 0, 1);
+  --toastify-bg-danger_shade-bg: black;
   --toastify-bg-custom-one: #addb96;
   --toastify-bg-custom-one_shade: rgba(173, 219, 150, 0.3);
-  --toastify-bg-custom-one_shade-bg: rgba(0, 0, 0, 1);
+  --toastify-bg-custom-one_shade-bg: black;
   --toastify-bg-custom-two: #eceaaf;
   --toastify-bg-custom-two_shade: rgba(236, 234, 175, 0.3);
-  --toastify-bg-custom-two_shade-bg: rgba(0, 0, 0, 1);
+  --toastify-bg-custom-two_shade-bg: black;
   --toastify-bg-custom-three: #edc1fa;
   --toastify-bg-custom-three_shade: rgba(237, 193, 250, 0.3);
-  --toastify-bg-custom-three_shade-bg: rgba(0, 0, 0, 1);
+  --toastify-bg-custom-three_shade-bg: black;
 
   --toastify-text-neutral: #6c757d;
   --toastify-text-success: rgba(149, 205, 206, 0.5);
