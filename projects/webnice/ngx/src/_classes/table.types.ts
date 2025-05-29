@@ -70,6 +70,8 @@ export interface ITableEvent {
   way: TEventWay;
   /** Координаты и размеры ячейки таблицы в которой произошло событие. */
   rect: DOMRect;
+  /** Ссылка на HTML элемент события. */
+  target?: EventTarget | null;
   /** Номер строки данных происхождения события. Для area='data' или area='opt'. */
   row: number;
   /** Номер колонки данных происхождения события. Для area='data' или area='head'. */

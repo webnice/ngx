@@ -591,6 +591,7 @@ export class TableClass implements OnInit, OnDestroy, AfterViewInit {
     event = {
       area: area, way: 'click',
       rect: rect, row: row, col: col, x: $event.x, y: $event.y,
+      target: $event.target,
       isShift: isShift, data: $event,
     };
     this.event.next(event);
@@ -613,6 +614,7 @@ export class TableClass implements OnInit, OnDestroy, AfterViewInit {
     event = {
       area: area, way: 'context',
       rect: rect, row: row, col: col, x: $event.x, y: $event.y,
+      target: $event.target,
       isShift: $event.shiftKey, data: $event,
     };
     this.event.next(event);
@@ -631,6 +633,7 @@ export class TableClass implements OnInit, OnDestroy, AfterViewInit {
     event = {
       area: 'opt', way: 'button',
       rect: rect, row: 0, col: 0, x: $event.x, y: $event.y,
+      target: $event.target,
       isShift: $event.shiftKey, data: $event,
     };
     this.event.next(event);
@@ -644,15 +647,12 @@ export class TableClass implements OnInit, OnDestroy, AfterViewInit {
     const rect: DOMRect = this.getParentByTargetDomRect($event, 'BUTTON');
     let event: ITableEvent;
 
-    // ОТЛАДКА.
-    this.p$.size = 50;
-    // /ОТЛАДКА.
-
-
+    $event.stopPropagation();
     // Создание объекта события.
     event = {
-      area: 'head', way: 'paginator',
+      area: 'opt', way: 'paginator',
       rect: rect, row: 0, col: 0, x: $event.x, y: $event.y,
+      target: $event.target,
       isShift: $event.shiftKey, data: this.p$,
     };
     this.event.next(event);
