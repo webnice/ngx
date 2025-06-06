@@ -1,0 +1,20 @@
+<div
+  (mouseleave)="onEnd()"
+  class="body">
+  <!-- Тело элементов выбора с вертикальной прокруткой. -->
+  <div
+    class="overflow-y-visible">
+    <ul>
+      <!-- Массив элементов выбора. -->
+      <ng-container *ngFor="let item of sizes">
+        <li
+          (click)="onSelect($event, item.value)"
+          [ngClass]="{'sel': item.value === value, 'text-wddpFgActive1': item.value !== value}"
+          class="row text-osSemiBold14">{{ item.label }}
+        </li>
+      </ng-container>
+      <!-- /Массив элементов выбора. -->
+    </ul>
+  </div>
+  <!-- /Тело элементов выбора с вертикальной прокруткой. -->
+</div>

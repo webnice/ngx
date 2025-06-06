@@ -251,7 +251,7 @@ export class TableClass implements OnInit, OnDestroy, AfterViewInit {
     let size: number;
     let count: number;
 
-    if (paginator === undefined) return empty;
+    if (paginator === undefined || paginator.count <= 0) return empty;
     [paginator.current, paginator.max] = [this.p$.current, this.p$.max];
     // Расчёт постраничного переключателя.
     size = paginator.size > 0 ? paginator.size : 10;

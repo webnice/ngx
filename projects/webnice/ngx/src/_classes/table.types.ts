@@ -1,5 +1,5 @@
 import { TemplateRef } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ReplaySubject } from 'rxjs';
 
 import { EMediaName } from '../_types';
 
@@ -147,13 +147,15 @@ export interface ITableData {
   /** Статические данные таблицы. */
   rows?: IRow[];
   /** Обещание загрузки и обновления данных таблицы. */
-  loader?: () => Observable<IRow[]>;
+  loader?: () => ReplaySubject<IRow[]>;
 }
 
 /** Колонка заголовка таблицы. */
 export interface ICol {
   /** Название колонки или данные передаваемые в шаблон ячейки заголовка колонки таблицы. */
   data: string | object;
+  /** Название поля данных соответствующего колонки. Используется для сортировки и фильтрации. */
+  field?: string;
   /** Шаблон ячейки заголовка. */
   template?: TemplateRef<any>;
   /** Название минимального медиа разрешения, начиная с которого отображается колонка.

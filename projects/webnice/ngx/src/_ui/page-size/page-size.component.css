@@ -1,0 +1,16 @@
+@reference "../../main.css";
+
+.body {
+  @apply w-[65px] max-h-[200px] p-[8px] overflow-y-scroll hover:overflow-scroll;
+  @apply bg-wddpMainBg border border-wddpMenuBg;
+}
+
+.row {
+  @apply h-[29px] px-[5px] leading-[29px] text-right;
+  @apply hover:bg-wddpHover1;
+  @apply select-none cursor-pointer;
+}
+
+.sel {
+  @apply bg-wddpTableSelect text-wddpMainFg;
+}
