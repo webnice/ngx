@@ -17,7 +17,7 @@ export class PopupService {
 
   /** Конструктор. */
   constructor() {
-    this.duration = 7000; // 3 секунды.
+    this.duration = 7000; // миллисекунды.
   }
 
   /**

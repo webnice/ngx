@@ -25,7 +25,9 @@ export class DrawerService {
     if (this.stateService.instanceExists(remoteControl.id)) {
       return this.stateService.listenForClose(remoteControl.id);
     }
-    console.log('loaderComponent', loaderComponent);
+    // ОТЛАДКА.
+    // console.log('loaderComponent', loaderComponent);
+    // /ОТЛАДКА.
     const parentComponentRef =
       this.helperService.createAndConfigureDynamicComponents<
         ParentComponentType,

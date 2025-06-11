@@ -1,0 +1,15 @@
+.ng-vibe-drawer-overlay {
+  @apply backdrop-blur-[1px] border-gray-500;
+  @apply bottom-0 left-0 right-0 top-0;
+  @apply fixed z-[9999];
+}
+
+.ng-vibe-drawer-wrapper {
+  @apply min-w-[360px] max-w-[500px] w-full;
+  @apply bg-wddpBgMain;
+  @apply fixed overflow-hidden z-[10000];
+}
+
+.ng-vibe-drawer-wrapper .drawer-content {
+  @apply max-h-full max-w-full overflow-auto;
+}
