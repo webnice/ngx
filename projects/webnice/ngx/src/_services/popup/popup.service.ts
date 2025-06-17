@@ -67,7 +67,7 @@ export class PopupService {
     try {
       toast = new ToastifyRemoteControl();
     } catch (e: unknown) {
-      console.error(`Ошибка: ${e}`);
+      console.error(`Создание объекта ToastifyRemoteControl прервано ошибкой: ${e}`);
       return
     }
     if (title === undefined) title = '';

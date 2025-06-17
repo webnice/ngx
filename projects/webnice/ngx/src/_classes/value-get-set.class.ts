@@ -1,7 +1,7 @@
 // noinspection JSUnusedGlobalSymbols
 
 /** Описание типов значения поля. */
-export type TValue = string | number | string[] | null;
+export type TValue = string | number | string[] | boolean | null;
 
 /**
  * Класс добытчика/установщика для типа TValue.
