@@ -1,6 +1,6 @@
 {
   "name": "@webnice/ngx",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "peerDependencies": {
     "@angular/animations": "^19.2.13",
     "@angular/common": "^19.2.13",
